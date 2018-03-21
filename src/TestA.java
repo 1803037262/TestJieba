@@ -3,24 +3,9 @@ import java.io.InputStreamReader;
 import java.util.HashMap;
 import java.util.Map;
 
-import org.python.core.PyFunction;
-import org.python.core.PyObject;
-import org.python.util.PythonInterpreter;
-
 public class TestA {
 public static void main(String[] args) {
-
- /*   PythonInterpreter interpreter = new PythonInterpreter();
-    interpreter.exec("import sys");
-    interpreter.exec("import jieba");
-    interpreter.exec("import jieba.analyse");
-    interpreter.execfile("D:/pythonwork/TestPython/TestJieba.py");*/
-   /* PyFunction func = (PyFunction) interpreter.get("adder",
-        PyFunction.class);
- 
-    int a = 2010, b = 2;
-    PyObject pyobj = func.__call__(new PyInteger(a), new PyInteger(b))*/;
-//    System.out.println("anwser = " + pyobj.toString());
+	//这是通过wind中cmd命令指令python文件
 	/* try {
           //String a=getPara("car").substring(1),b="D34567",c="LJeff34",d="iqngfao";
           //String[] args1=new String[]{ "python", "D:\\pyworkpeace\\9_30_1.py", a, b, c, d };
@@ -40,9 +25,10 @@ public static void main(String[] args) {
           e.printStackTrace();
      }*/
     
-    String scriptFile = "D:/pythonwork/TestPython/TestJieba.py";  
+	//python所在位置
+    String scriptFile = "D:/pythonwork/TestPython/TestJieba.py"; 
+    //实际上没有什么用
     Map<String,String> properties = new HashMap<String,String>();  
-    //properties.put("txt_wb", "安鹏程");  
       
     ExecPython.INSTANCE.execute(scriptFile, properties);
 	}
