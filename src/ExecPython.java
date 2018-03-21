@@ -30,7 +30,7 @@ public enum ExecPython
         {  
             //ͨ��python����������python�ű�  
             inter.execfile(scriptFile); 
-            //第二种方式 调用python中的方法
+            //第二种方式 调用python中的方法(参数为中文)
             PyFunction func = (PyFunction) inter.get("getWbfx",
                     PyFunction.class);
             PyObject aaa = func.__call__(Py.newStringUTF8("根据重点。"));
